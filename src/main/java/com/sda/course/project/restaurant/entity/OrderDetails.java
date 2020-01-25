@@ -12,6 +12,7 @@ import javax.persistence.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+//TODO: add some validation on fields and preferred to use Objects instead of primitive avoid have default values  and pass DB validations
 public class OrderDetails {
     @Id
     @Column(name = "orderDetailsId")

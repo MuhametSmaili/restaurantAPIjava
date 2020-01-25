@@ -1,5 +1,5 @@
 package com.sda.course.project.restaurant.controllers;
-
+//TODO: remvoe unused imports
 import com.querydsl.core.Tuple;
 import com.sda.course.project.restaurant.entity.OrderFood;
 import com.sda.course.project.restaurant.service.OrderFoodService;
@@ -37,11 +37,11 @@ public class OrderFoodController {
     @GetMapping("/{id}")
     public @ResponseBody
     List<OrderFood> findOrdersByPersonId(@NotNull @Valid @PathVariable int id){ return orderFoodService.findOrdersByPersonId(id);}
-
+//TODO: method name not descriptive
     @GetMapping("/top")
     public @ResponseBody
     List<OrderFood> findOrdersByPersonsTotalPrice(){return orderFoodService.findOrdersByTotalPrice();}
-
+//TODO: method name not descriptive
     @GetMapping("/top2")
     public @ResponseBody
     List<OrderFood> test(){return orderFoodService.findOrderFoodSortedByBestCostumer();}

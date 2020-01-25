@@ -14,7 +14,7 @@ import java.util.List;
 public class FoodController {
     @Autowired
     private FoodService foodService;
-
+//TODO: could remove the path
     @GetMapping(path = "/all")
     public @ResponseBody List<Food> findAllFood(){
         return foodService.findAll();

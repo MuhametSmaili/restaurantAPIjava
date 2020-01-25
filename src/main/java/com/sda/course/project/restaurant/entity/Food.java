@@ -13,6 +13,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+//TODO: remove unused imports and code also can add some validation on fields
 public class Food {
     @Id
     @Column(name = "foodId")

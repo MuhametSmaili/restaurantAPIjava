@@ -25,7 +25,7 @@ public class PersonsController {
     List<Persons> findAll(){
 
         Pageable firstPageWithTwoElements = PageRequest.of(0, 2);
-
+//TODO: remove unused lines
 //        return personsService.findAll(firstPageWithTwoElements);
         return personsService.findAll(firstPageWithTwoElements);
     }
@@ -41,7 +41,7 @@ public class PersonsController {
 
     @PostMapping("/")
     public void saveAll(@NotNull @Valid @RequestBody ArrayList<Persons> persons){ personsService.saveAll(persons);}
-
+//TODO: could use map and reflection for advance
     @PatchMapping("/update/{id}")
     public void update(@Valid @NotNull @PathVariable(value = "id") int id,@Valid @NotNull @RequestBody Optional<Persons> persons) {
         Optional<Persons> persons1 = personsService.findById(id);

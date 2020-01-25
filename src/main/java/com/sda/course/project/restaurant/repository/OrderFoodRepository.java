@@ -14,10 +14,10 @@ import java.util.List;
 public interface OrderFoodRepository extends JpaRepository<OrderFood,Integer> {
 
     List<OrderFood> findOrderFoodByPersonsPersonId(@Valid @NotNull int persons);
-
+//TODO: use query by name
     @Query(value = "select u from OrderFood u order by u.totalPrice desc")
     List<OrderFood> findAllOrderSorted();
-
+//
     @Query(value = "select order_id,order_date,sum(total_price) as total_price,type_of_payment,person_id from order_food group by person_id order by SUM(total_price) desc;",nativeQuery = true)
     List<OrderFood> findOrderFoodByCostumerSortedByTotalPrice();
 }
